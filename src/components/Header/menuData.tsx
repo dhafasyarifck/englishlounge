@@ -51,7 +51,7 @@ const menuData: Menu[] = [
       {
         id: 47,
         title: "Cambridge Preparation",
-        path: "/signup",
+        path: "/",
         newTab: false,
       },
     ],
