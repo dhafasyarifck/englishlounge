@@ -53,7 +53,7 @@ const ForAdultsSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-regular" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-adults/register/reguler" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
@@ -71,7 +71,7 @@ const ForAdultsSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-adults/register/private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
@@ -91,7 +91,7 @@ const ForAdultsSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-online-regular" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-adults/register/reguler" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
@@ -109,7 +109,7 @@ const ForAdultsSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-online-private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-adults/register/private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
