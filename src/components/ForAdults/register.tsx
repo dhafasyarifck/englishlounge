@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { teenagers } from "@/constant/data";
+import { adults } from "@/constant/data";
 import { formatRupiah } from "@/utils/formatNumber";
 
 const ForchildrenDaftar = () => {
@@ -9,9 +9,12 @@ const ForchildrenDaftar = () => {
     jenisKelas: "",
     lokasiBelajar: "",
     paketBelajar: null,
+    TipeKelas: '',
+
     sesi: "",
     privatePricing: null,
     privatePricingFilter: null,
+    privateSessionFilter: null,
   });
 
   const handleChange = (e) => {
@@ -20,7 +23,7 @@ const ForchildrenDaftar = () => {
       ...prev,
       [name]: value,
     }));
-
+    console
     if (name === "metodeBelajar" || name === "jenisKelas") {
       setFormState((prev) => ({
         ...prev,
@@ -31,15 +34,24 @@ const ForchildrenDaftar = () => {
     }
   };
 
+  const handleTipeKelas = (e) => {
+    const TipeKelas = adults.session_plans.find(
+      (plan) => plan.plan_name === e.target.value
+    );
+    setFormState((prev) => ({ ...prev, privateSessionFilter: TipeKelas }));
+    setFormState((prev) => ({ ...prev, TipeKelas: e.target.value }));
+  }
+
   const handleSetPaketBelajar = (e) => {
-    const paketBelajar = teenagers.subscription_plans.find(
+    const paketBelajar = adults.subscription_plans.find(
       (plan) => plan.duration === parseInt(e.target.value)
     );
+    console.log(paketBelajar);
     setFormState((prev) => ({ ...prev, paketBelajar }));
   };
 
   const handleSesi = (e) => {
-    const filter = teenagers.session_plans.pricing.filter(
+    const filter = privateSessionFilter?.pricing?.filter(
       (plan) => plan.sessions === parseInt(e.target.value)
     );
     setFormState((prev) => ({
@@ -56,13 +68,41 @@ const ForchildrenDaftar = () => {
     setFormState((prev) => ({ ...prev, privatePricing }));
   };
 
+  const handleWhatsAppLink = () => {
+    // For the first format with sessions and participants
+    const sesiText = sesi ? `${sesi} sesi` : "";
+    const tipeKelasText = jenisKelas ? `${jenisKelas}` : "";
+    const hargaPrivateText = privatePricing ? `${formatRupiah(privatePricing?.price)}` : "";
+    const pesertaText = privatePricing ? `${privatePricing?.participants} peserta` : "";
+
+    // For the second format with subscription duration
+    const tipeKelasPaketText = jenisKelas ? `${jenisKelas}` : "";
+    const hargaPaketText = paketBelajar?.price?.Basic ? `${formatRupiah(paketBelajar?.price?.Basic)}` : "";
+    const durasiPaketText = paketBelajar?.duration ? `Selama ${paketBelajar?.duration} bulan` : "";
+
+    // Build the WhatsApp message for both scenarios
+    const message = `Hii, aku tertarik untuk ikut kelas English Lounge untuk dewasa dengan paket ini:\n\n` +
+      (sesiText ? `${sesiText}\n${tipeKelasText}\n${hargaPrivateText}\n${pesertaText}\n\n` : "") +
+      (durasiPaketText ? `${tipeKelasPaketText}\n${hargaPaketText}\n${durasiPaketText}\n\n` : "");
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappLink = `https://api.whatsapp.com/send?phone=6281294167130&text=${encodedMessage}`;
+
+    window.open(whatsappLink, '_blank');
+  };
+
+
+
   const {
     metodeBelajar,
     jenisKelas,
     paketBelajar,
     sesi,
+    TipeKelas,
     privatePricing,
     privatePricingFilter,
+    privateSessionFilter
   } = formState;
 
   return (
@@ -70,7 +110,7 @@ const ForchildrenDaftar = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <h2 className="text-2xl font-semibold mb-4">English for teenagers</h2>
+          <h2 className="text-2xl font-semibold mb-4">English for adults</h2>
           <p className="mb-2">
             Program ini didesain khusus untuk anak-anak yang aktif belajar di jenjang sekolah dasar.
           </p>
@@ -144,11 +184,30 @@ const ForchildrenDaftar = () => {
                   className="w-full p-2 border border-gray-300 rounded-md"
                 >
                   <option value="">Pilih Paket</option>
-                  {teenagers.subscription_plans.map((plan, index) => (
+                  {adults.subscription_plans.map((plan, index) => (
                     <option key={index} value={plan.duration}>
                       {plan.duration} bulan
                     </option>
                   ))}
+                </select>
+              </div>
+            )}
+
+            {paketBelajar && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Pilih Tipe Kelas
+                </label>
+                <select
+                  name="TipeKelas"
+                  value={TipeKelas || ""}
+                  onChange={handleChange}
+                  className="w-full p-2 border border-gray-300 rounded-md"
+                >
+                  <option value="">Pilih Tipe Kelas</option>
+                  <option value="Basic">Basic</option>
+                  <option value="Active Communication">Active Communication</option>
+                  <option value="Business Communication">Business Communication</option>
                 </select>
               </div>
             )}
@@ -158,23 +217,49 @@ const ForchildrenDaftar = () => {
               <>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Pilih Sesi
+                    Pilih Tipe Kelas
                   </label>
                   <select
-                    name="sesi"
-                    value={sesi}
-                    onChange={handleSesi}
+                    name="TipeKelas"
+                    value={TipeKelas}
+                    onChange={handleTipeKelas}
                     className="w-full p-2 border border-gray-300 rounded-md"
                   >
-                    <option value="">Pilih Sesi</option>
-                    {teenagers.session_plans.pricing.map((plan, index) => (
+                    <option value="">Pilih Tipe Kelas</option>
+                    {/* {adults.session_plans.pricing.map((plan, index) => (
                       <option key={index} value={plan.sessions}>
                         {plan.sessions} sesi
                       </option>
+                    ))} */}
+                    {adults.session_plans.map((plan, index) => (
+                      <option key={index} value={plan.plan_name}>
+                        {plan.plan_name}
+                      </option>
                     ))}
+
                   </select>
                 </div>
 
+                {TipeKelas && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Pilih Sesi
+                    </label>
+                    <select
+                      name="sesi"
+                      value={sesi}
+                      onChange={handleSesi}
+                      className="w-full p-2 border border-gray-300 rounded-md"
+                    >
+                      <option value="">Pilih Sesi</option>
+                      {privateSessionFilter?.pricing.map((plan, index) => (
+                        <option key={index} value={plan.sessions}>
+                          {plan.sessions} sesi
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
                 {sesi && (
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -201,8 +286,8 @@ const ForchildrenDaftar = () => {
             {/* Display Pricing */}
             {(paketBelajar && jenisKelas === "Group Class") && (
               <div className="bg-gray-100 p-4 rounded-lg text-center">
-                {/* <p className="line-through text-gray-500 text-sm hidden">{paketBelajar.duration}</p> */}
-                <p className="text-lg font-semibold text-green-600">{formatRupiah(paketBelajar?.price)}</p>
+                <p className=" text-gray-500 text-base">{TipeKelas}</p>
+                <p className="text-lg font-semibold text-green-600">{formatRupiah(paketBelajar?.price?.Basic)}</p>
                 <p className="text-sm text-green-500">Selama {paketBelajar?.duration} bulan</p>
 
                 {/* Fasilitas Toggle */}
@@ -221,6 +306,7 @@ const ForchildrenDaftar = () => {
             {(jenisKelas === "Private Class" && privatePricing) && (
               <div className="bg-gray-100 p-4 rounded-lg text-center">
                 <p className=" text-gray-500 text-base">{sesi} sesi</p>
+                <p className=" text-gray-500 text-base">{TipeKelas}</p>
                 <p className="text-lg font-semibold text-green-600">{formatRupiah(privatePricing?.price)}</p>
                 <p className="text-sm text-green-500">{privatePricing?.participants} peserta</p>
 
@@ -240,6 +326,7 @@ const ForchildrenDaftar = () => {
             {/* Submit Button */}
             <button
               type="submit"
+              onClick={handleWhatsAppLink}
               className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
             >
               Daftar Sekarang

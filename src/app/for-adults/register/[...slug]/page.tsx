@@ -1,7 +1,7 @@
 
 import dynamic from "next/dynamic";
 
-const Register = dynamic(() => import("@/components/ForChildren/register"));
+const Register = dynamic(() => import("@/components/ForAdults/register"));
 
 import { Metadata } from "next";
 

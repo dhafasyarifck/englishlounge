@@ -56,6 +56,32 @@ const ForchildrenDaftar = () => {
     setFormState((prev) => ({ ...prev, privatePricing }));
   };
 
+  const handleWhatsAppLink = () => {
+    // For Private Class (sessions and participants)
+    const sesiText = sesi ? `${sesi} sesi` : "";
+    const tipeKelasText = jenisKelas ? `${jenisKelas}` : "";
+    const hargaPrivateText = privatePricing ? `${formatRupiah(privatePricing?.price)}` : "";
+    const pesertaText = privatePricing ? `${privatePricing?.participants} peserta` : "";
+
+    // For Group Class (subscription duration)
+    const tipeKelasPaketText = jenisKelas ? `${jenisKelas}` : "";
+    const hargaPaketText = paketBelajar?.price ? `${formatRupiah(paketBelajar?.price)}` : "";
+    const durasiPaketText = paketBelajar?.duration ? `Selama ${paketBelajar?.duration} bulan` : "";
+
+    // Build the WhatsApp message for both scenarios
+    const message = `Hii, aku tertarik untuk ikut kelas English Lounge untuk anak-anak dengan paket ini:\n\n` +
+      (sesiText ? `${sesiText}\n${tipeKelasText}\n${hargaPrivateText}\n${pesertaText}\n\n` : "") +
+      (durasiPaketText ? `${tipeKelasPaketText}\n${hargaPaketText}\n${durasiPaketText}\n\n` : "");
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappLink = `https://api.whatsapp.com/send?phone=6281294167130&text=${encodedMessage}`;
+
+    // Open WhatsApp link in a new tab
+    window.open(whatsappLink, '_blank');
+  };
+
+
   const {
     metodeBelajar,
     jenisKelas,
@@ -240,6 +266,7 @@ const ForchildrenDaftar = () => {
             {/* Submit Button */}
             <button
               type="submit"
+              onClick={handleWhatsAppLink}
               className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
             >
               Daftar Sekarang
