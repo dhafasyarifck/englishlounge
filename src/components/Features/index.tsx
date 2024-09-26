@@ -1,5 +1,8 @@
-import SectionTitle from "../Common/SectionTitle";
-import SingleFeature from "./SingleFeature";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the components
+const SectionTitle = dynamic(() => import('../Common/SectionTitle'));
+const SingleFeature = dynamic(() => import('./SingleFeature'));
 import featuresData from "./featuresData";
 
 const Features = () => {

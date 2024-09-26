@@ -1,6 +1,9 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
+import dynamic from 'next/dynamic';
+
+// Dynamically import components
+const SingleBlog = dynamic(() => import('@/components/Blog/SingleBlog'));
+const Breadcrumb = dynamic(() => import('@/components/Common/Breadcrumb'));
 import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
 

@@ -1,6 +1,9 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import dynamic from 'next/dynamic';
+
+// Dynamically import components
+const AboutSectionOne = dynamic(() => import('@/components/About/AboutSectionOne'));
+const AboutSectionTwo = dynamic(() => import('@/components/About/AboutSectionTwo'));
+const Breadcrumb = dynamic(() => import('@/components/Common/Breadcrumb'));
 
 import { Metadata } from "next";
 

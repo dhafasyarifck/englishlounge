@@ -1,14 +1,17 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import dynamic from "next/dynamic";
+
+const AboutSectionOne = dynamic(() => import("@/components/About/AboutSectionOne"));
+const AboutSectionTwo = dynamic(() => import("@/components/About/AboutSectionTwo"));
+const Blog = dynamic(() => import("@/components/Blog"));
+const Brands = dynamic(() => import("@/components/Brands"));
+const ScrollUp = dynamic(() => import("@/components/Common/ScrollUp"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const Features = dynamic(() => import("@/components/Features"));
+const Hero = dynamic(() => import("@/components/Hero"));
+const Pricing = dynamic(() => import("@/components/Pricing"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const Video = dynamic(() => import("@/components/Video"));
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

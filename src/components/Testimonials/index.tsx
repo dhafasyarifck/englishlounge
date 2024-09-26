@@ -1,6 +1,9 @@
 import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the components
+const SectionTitle = dynamic(() => import('../Common/SectionTitle'));
+const SingleTestimonial = dynamic(() => import('./SingleTestimonial'));
 
 const testimonialData: Testimonial[] = [
   {

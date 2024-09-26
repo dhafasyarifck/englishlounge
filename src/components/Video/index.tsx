@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the SectionTitle component
+const SectionTitle = dynamic(() => import('../Common/SectionTitle'));
 
 import ModalVideo from "react-modal-video";
 

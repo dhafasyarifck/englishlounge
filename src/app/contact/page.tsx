@@ -1,5 +1,8 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact from "@/components/Contact";
+import dynamic from 'next/dynamic';
+
+// Dynamically import components
+const Breadcrumb = dynamic(() => import('@/components/Common/Breadcrumb'));
+const Contact = dynamic(() => import('@/components/Contact'));
 
 import { Metadata } from "next";
 

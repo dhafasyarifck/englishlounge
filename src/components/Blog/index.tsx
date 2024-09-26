@@ -1,6 +1,11 @@
-import SectionTitle from "../Common/SectionTitle";
-import SingleBlog from "./SingleBlog";
-import blogData from "./blogData";
+import dynamic from 'next/dynamic';
+
+// Dynamically import components
+const SectionTitle = dynamic(() => import('../Common/SectionTitle'));
+const SingleBlog = dynamic(() => import('./SingleBlog'));
+
+// Static import for blogData
+import blogData from './blogData';
 
 const Blog = () => {
   return (

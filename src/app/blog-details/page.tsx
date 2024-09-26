@@ -1,5 +1,8 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
+import dynamic from 'next/dynamic';
+
+// Dynamically import components
+const SharePost = dynamic(() => import('@/components/Blog/SharePost'));
+const TagButton = dynamic(() => import('@/components/Blog/TagButton'));
 import Image from "next/image";
 
 import { Metadata } from "next";
