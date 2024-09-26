@@ -43,9 +43,9 @@ const ForchildrenSectionThree = () => {
           {selectedMode === "Offline" ? (
             <>
               {/* Offline Mode - English For Children Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/children-regular.jpg" // Replace with actual image path
+                  src="/images/forchildren/OfflineRegular.png" // Replace with actual image path
                   alt="English For Children Regular"
                   width={400}
                   height={200}
@@ -55,15 +55,15 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-regular" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
 
               {/* Offline Mode - English For Children Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/children-private.jpg" // Replace with actual image path
+                  src="/images/forchildren/OfflinePrivate.png" // Replace with actual image path
                   alt="English For Children Private"
                   width={400}
                   height={200}
@@ -73,7 +73,7 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
@@ -81,9 +81,9 @@ const ForchildrenSectionThree = () => {
           ) : (
             <>
               {/* Online Mode - English For Children Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/children-online-regular.jpg" // Replace with actual image path
+                  src="/images/forchildren/OfflineRegular.png" // Replace with actual image path
                   alt="English For Children Online Regular"
                   width={400}
                   height={200}
@@ -93,15 +93,15 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-online-regular" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
 
               {/* Online Mode - English For Children Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/children-online-private.jpg" // Replace with actual image path
+                  src="/images/forchildren/OnlinePrivate.png" // Replace with actual image path
                   alt="English For Children Online Private"
                   width={400}
                   height={200}
@@ -111,7 +111,7 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/register-online-private" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
