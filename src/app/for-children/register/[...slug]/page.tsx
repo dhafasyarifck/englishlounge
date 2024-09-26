@@ -1,6 +1,7 @@
 
-import Register from "@/components/ForChildren/register";
+import dynamic from "next/dynamic";
 
+const Register = dynamic(() => import("@/components/ForChildren/register"));
 
 import { Metadata } from "next";
 
@@ -10,12 +11,10 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ForchildrenPage = () => {
+const ForchildrenPage = ({ params }) => {
   return (
     <>
-
       <Register />
-
     </>
   );
 };

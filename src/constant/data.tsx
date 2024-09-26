@@ -291,59 +291,58 @@ export const children = {
             "price": "2200000"
         }
     ],
-    "session_plans": [
-        {
-            "plan_name": "Group Class Private",
-            "pricing": [
-                {
-                    "sessions": 8,
-                    "prices": [
-                        { "participants": 1, "price": "900000" },
-                        { "participants": 2, "price": "1100000" },
-                        { "participants": 3, "price": "1400000" },
-                        { "participants": 4, "price": "1600000" },
-                        { "participants": 5, "price": "1900000" },
-                        { "participants": 6, "price": "2100000" },
-                        { "participants": 7, "price": "2400000" }
-                    ]
-                },
-                {
-                    "sessions": 16,
-                    "prices": [
-                        { "participants": 1, "price": "1600000" },
-                        { "participants": 2, "price": "2000000" },
-                        { "participants": 3, "price": "2300000" },
-                        { "participants": 4, "price": "2700000" },
-                        { "participants": 5, "price": "3100000" },
-                        { "participants": 6, "price": "3500000" },
-                        { "participants": 7, "price": "3800000" }
-                    ]
-                },
-                {
-                    "sessions": 28,
-                    "prices": [
-                        { "participants": 1, "price": "2600000" },
-                        { "participants": 2, "price": "3200000" },
-                        { "participants": 3, "price": "3700000" },
-                        { "participants": 4, "price": "4300000" },
-                        { "participants": 5, "price": "4900000" },
-                        { "participants": 6, "price": "5500000" },
-                        { "participants": 7, "price": "6000000" }
-                    ]
-                },
-                {
-                    "sessions": 42,
-                    "prices": [
-                        { "participants": 1, "price": "3600000" },
-                        { "participants": 2, "price": "4400000" },
-                        { "participants": 3, "price": "5200000" },
-                        { "participants": 4, "price": "6000000" },
-                        { "participants": 5, "price": "6500000" },
-                        { "participants": 6, "price": "7500000" },
-                        { "participants": 7, "price": "8000000" }
-                    ]
-                }
-            ]
-        }
-    ]
+    "session_plans":
+    {
+        "plan_name": "Group Class Private",
+        "pricing": [
+            {
+                "sessions": 8,
+                "prices": [
+                    { "participants": 1, "price": "900000" },
+                    { "participants": 2, "price": "1100000" },
+                    { "participants": 3, "price": "1400000" },
+                    { "participants": 4, "price": "1600000" },
+                    { "participants": 5, "price": "1900000" },
+                    { "participants": 6, "price": "2100000" },
+                    { "participants": 7, "price": "2400000" }
+                ]
+            },
+            {
+                "sessions": 16,
+                "prices": [
+                    { "participants": 1, "price": "1600000" },
+                    { "participants": 2, "price": "2000000" },
+                    { "participants": 3, "price": "2300000" },
+                    { "participants": 4, "price": "2700000" },
+                    { "participants": 5, "price": "3100000" },
+                    { "participants": 6, "price": "3500000" },
+                    { "participants": 7, "price": "3800000" }
+                ]
+            },
+            {
+                "sessions": 28,
+                "prices": [
+                    { "participants": 1, "price": "2600000" },
+                    { "participants": 2, "price": "3200000" },
+                    { "participants": 3, "price": "3700000" },
+                    { "participants": 4, "price": "4300000" },
+                    { "participants": 5, "price": "4900000" },
+                    { "participants": 6, "price": "5500000" },
+                    { "participants": 7, "price": "6000000" }
+                ]
+            },
+            {
+                "sessions": 42,
+                "prices": [
+                    { "participants": 1, "price": "3600000" },
+                    { "participants": 2, "price": "4400000" },
+                    { "participants": 3, "price": "5200000" },
+                    { "participants": 4, "price": "6000000" },
+                    { "participants": 5, "price": "6500000" },
+                    { "participants": 6, "price": "7500000" },
+                    { "participants": 7, "price": "8000000" }
+                ]
+            }
+        ]
+    }
 }
