@@ -1,5 +1,5 @@
 
-import ForchildrenDaftar from "@/components/Forchildren/ForchildrenDaftar";
+import Register from "@/components/ForChildren/register";
 
 
 import { Metadata } from "next";
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 const ForchildrenPage = () => {
   return (
     <>
-     
-       <ForchildrenDaftar />
+
+      <Register />
 
     </>
   );

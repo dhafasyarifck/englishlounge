@@ -17,21 +17,19 @@ const ForchildrenSectionThree = () => {
         {/* Toggle Button */}
         <div className="flex justify-center space-x-4 mb-8">
           <button
-            className={`px-6 py-2 rounded-full transition-all duration-300 ${
-              selectedMode === "Offline"
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${selectedMode === "Offline"
                 ? "bg-blue-700 text-white shadow-lg transform scale-105"
                 : "bg-gray-200 text-gray-700"
-            }`}
+              }`}
             onClick={() => setSelectedMode("Offline")}
           >
             Offline
           </button>
           <button
-            className={`px-6 py-2 rounded-full transition-all duration-300 ${
-              selectedMode === "Online"
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${selectedMode === "Online"
                 ? "bg-blue-700 text-white shadow-lg transform scale-105"
                 : "bg-gray-200 text-gray-700"
-            }`}
+              }`}
             onClick={() => setSelectedMode("Online")}
           >
             Online
@@ -55,7 +53,7 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-children/register" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
@@ -73,7 +71,7 @@ const ForchildrenSectionThree = () => {
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
-                <Link href="/forchildren/daftar" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
+                <Link href="/for-children/register" className="inline-block mt-4 px-6 py-2 bg-blue-700 text-white font-bold rounded-full">
                   Daftar Sekarang
                 </Link>
               </div>
