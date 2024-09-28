@@ -1,15 +1,21 @@
+import clsx from "clsx";
+
 const SectionTitle = ({
   title,
   paragraph,
   width = "570px",
   center,
   mb = "100px",
+  titleStyle = 'text-3xl md:text-[45px]',
+  paragraphStyle = 'text-base md:text-lg',
 }: {
   title: string;
   paragraph: string;
   width?: string;
   center?: boolean;
   mb?: string;
+  titleStyle?: string;
+  paragraphStyle?: string;
 }) => {
   return (
     <>
@@ -17,10 +23,10 @@ const SectionTitle = ({
         className={`w-full ${center ? "mx-auto text-center" : ""}`}
         style={{ maxWidth: width, marginBottom: mb }}
       >
-        <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+        <h2 className={clsx("mb-4 font-bold !leading-tight text-black dark:text-white sm:text-4xl", titleStyle)}>
           {title}
         </h2>
-        <p className="text-base !leading-relaxed text-body-color md:text-lg">
+        <p className={clsx("!leading-relaxed text-body-color", paragraphStyle)}>
           {paragraph}
         </p>
       </div>

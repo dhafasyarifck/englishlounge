@@ -25,12 +25,8 @@ const ForTeenegersPage = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
       <SectionOne />
-      <SectionTwo />
-      <SectionThree />
       <SectionFour />
-
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <SectionTwo />
     </>
   );
 };

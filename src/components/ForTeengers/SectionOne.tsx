@@ -19,7 +19,7 @@ const ForchildrenSectionOne = () => {
   return (
     <section
       id="forchildren"
-      className="flex items-center py-12 bg-gray-100 relative"
+      className="flex items-center bg-gray-100 relative"
     >
       <div
         style={{
