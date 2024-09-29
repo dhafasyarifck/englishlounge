@@ -1,9 +1,5 @@
 import dynamic from "next/dynamic";
 
-const MenuSection = dynamic(() => import("@/components/MenuSection"));
-const ProgramKursus = dynamic(() => import("@/components/ProgramKursus"));
-const Keunggulan = dynamic(() => import("@/components/Keunggulan"));
-const Tutors = dynamic(() => import("@/components/Tutors"));
 const AboutSectionOne = dynamic(() => import("@/components/About/AboutSectionOne"));
 const AboutSectionTwo = dynamic(() => import("@/components/About/AboutSectionTwo"));
 const Blog = dynamic(() => import("@/components/Blog"));
@@ -30,14 +26,14 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <MenuSection />
-      <ProgramKursus />
-      <Keunggulan />
-      <Tutors />
-      {/*<Brands />*/}
-      {/* <Testimonials />*/}
-       {/*<Blog />*/}
-     {/* <Contact /> */}
+      <Focus />
+      <Video />
+      <Brands />
+      <Testimonials />
+      <Classes />
+      {/* <Pricing />
+      <Blog /> */}
+      {/* <Contact /> */}
     </>
   );
 }

@@ -80,7 +80,7 @@ const ForchildrenSectionThree = () => {
               {/* Online Mode - English For Children Regular */}
               <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/forchildren/OnlineRegular.png" // Replace with actual image path
+                  src="/images/forchildren/OfflineRegular.png" // Replace with actual image path
                   alt="English For Children Online Regular"
                   width={400}
                   height={200}

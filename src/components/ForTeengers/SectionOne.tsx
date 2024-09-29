@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const SectionOne = () => {
+const ForchildrenSectionOne = () => {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isPressed1, setIsPressed1] = useState(false);
@@ -18,14 +18,14 @@ const SectionOne = () => {
 
   return (
     <section
-      id="forteenagers"
-      className="flex items-center py-12 bg-gray-100 relative"
+      id="forchildren"
+      className="flex items-center bg-gray-100 relative"
     >
       <div
         style={{
           flex: 1,
           padding: '20px',
-          backgroundImage: "url('/images/forteenagers/Banner2n.png')",
+          backgroundImage: "url('/images/forchildren/Banner2n.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'left',
           height: '80vh'
@@ -35,7 +35,7 @@ const SectionOne = () => {
         <div className="container pt-10">
           <h2 className="text-4xl mb-5 text-black">Kursus Bahasa Inggris Untuk Remaja</h2>
           <p className="text-lg mb-8 text-black">
-          Kursus Bahasa Inggris untuk Remaja atau English for Teenagers adalah program yang dikonsep khusus bagi siswa/i SMP.
+            Kursus bahasa Inggris untuk anak dengan fasilitas lengkap dan biaya super terjangkau.
           </p>
           <p className="text-xl font-bold text-black">
             50.000+ <br />
@@ -43,7 +43,7 @@ const SectionOne = () => {
           </p>
           <div className="mt-8 space-x-4">
             <a
-              href="#teenagers"
+              href="#"
               className={`px-6 py-3 text-white rounded-lg transition-transform duration-200 ${isHovered1 ? 'bg-orange-600' : 'bg-orange-500'} ${isPressed1 ? 'scale-95' : 'scale-100'}`}
               onMouseEnter={() => setIsHovered1(true)}
               onMouseLeave={() => setIsHovered1(false)}
@@ -53,7 +53,7 @@ const SectionOne = () => {
               Daftar Sekarang
             </a>
             <a
-              href="https://wa.me/+6281294167130"
+              href="#"
               className={`px-6 py-3 text-white rounded-lg transition-transform duration-200 ${isHovered2 ? 'bg-green-600' : 'bg-green-500'} ${isPressed2 ? 'scale-95' : 'scale-100'}`}
               onMouseEnter={() => setIsHovered2(true)}
               onMouseLeave={() => setIsHovered2(false)}
@@ -70,4 +70,4 @@ const SectionOne = () => {
   );
 };
 
-export default SectionOne;
+export default ForchildrenSectionOne;

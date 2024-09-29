@@ -1,14 +1,11 @@
 import dynamic from "next/dynamic";
 
-const MenuSection = dynamic(() => import("@/components/MenuSection"));
+const AboutSectionOne = dynamic(() => import("@/components/About/AboutSectionOne"));
+const AboutSectionTwo = dynamic(() => import("@/components/About/AboutSectionTwo"));
 const SectionOne = dynamic(() => import("@/components/ForTeengers/SectionOne"));
 const SectionTwo = dynamic(() => import("@/components/ForTeengers/SectionTwo"));
 const SectionThree = dynamic(() => import("@/components/ForTeengers/SectionThree"));
 const SectionFour = dynamic(() => import("@/components/ForTeengers/SectionFour"));
-const SectionFive = dynamic(() => import("@/components/ForTeengers/SectionFive"));
-const SectionSix = dynamic(() => import("@/components/ForTeengers/SectionSix"));
-const SectionFaq = dynamic(() => import("@/components/ForTeengers/SectionFaq"));
-const Video = dynamic(() => import("@/components/ForTeengers/Video"));
 const Breadcrumb = dynamic(() => import("@/components/Common/Breadcrumb"));
 
 
@@ -28,14 +25,8 @@ const ForTeenegersPage = () => {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
       <SectionOne />
-      <MenuSection />
-      <SectionTwo />
-      <SectionThree />
       <SectionFour />
-      <SectionSix />
-      <Video />
-      <SectionFive />
-      <SectionFaq />
+      <SectionTwo />
     </>
   );
 };
