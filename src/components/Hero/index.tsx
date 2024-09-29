@@ -5,17 +5,17 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-16 dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container">
+        <div className="container mt-36 sm:mt-20">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Welcome to English Lounge!
+                  Welcome to English Lounge!
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                Step into a space where language meets learning. At English Lounge, we are committed to helping you sharpen your English communication skills in a relaxed and interactive environment. Whether you&lsquo;re here to improve your fluency, expand your vocabulary, or perfect your pronunciation, our supportive community and experienced guides are here to help you achieve your language goals.Join us for engaging conversations, fun learning activities, and a journey towards mastering English!Let&lsquo;s make learning enjoyable and effective together.
+                  Step into a space where language meets learning. At English Lounge, we are committed to helping you sharpen your English communication skills in a relaxed and interactive environment. Whether you&lsquo;re here to improve your fluency, expand your vocabulary, or perfect your pronunciation, our supportive community and experienced guides are here to help you achieve your language goals.Join us for engaging conversations, fun learning activities, and a journey towards mastering English!Let&lsquo;s make learning enjoyable and effective together.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

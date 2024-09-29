@@ -10,10 +10,11 @@ const Blog = dynamic(() => import("@/components/Blog"));
 const Brands = dynamic(() => import("@/components/Brands"));
 const ScrollUp = dynamic(() => import("@/components/Common/ScrollUp"));
 const Contact = dynamic(() => import("@/components/Contact"));
-const Features = dynamic(() => import("@/components/Features"));
+const Focus = dynamic(() => import("@/components/Focus"));
 const Hero = dynamic(() => import("@/components/Hero"));
 const Pricing = dynamic(() => import("@/components/Pricing"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const Classes = dynamic(() => import("@/components/Class"));
 const Video = dynamic(() => import("@/components/Video"));
 
 import { Metadata } from "next";
