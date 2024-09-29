@@ -2,16 +2,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const ForTeengersSectionThree = () => {
+const SectionThree = () => {
   const [selectedMode, setSelectedMode] = useState("Offline"); // State to toggle between Offline and Online
 
   return (
-    <section id="forTeengers" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="teenagers" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container mx-auto">
         {/* Title */}
         <h2 className="text-center text-3xl font-bold mb-8">
-          Daftar Program Kursus Bahasa Inggris Untuk Anak
+          Daftar Program Kursus Bahasa Inggris Untuk Remaja
         </h2>
 
         {/* Toggle Button */}
@@ -40,16 +39,16 @@ const ForTeengersSectionThree = () => {
         <div className="flex justify-center space-x-6">
           {selectedMode === "Offline" ? (
             <>
-              {/* Offline Mode - English For Teengers Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              {/* Offline Mode - English For Teenagers Regular */}
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Teengers-regular.jpg" // Replace with actual image path
-                  alt="English For Teengers Regular"
+                  src="/images/forteenagers/OfflineTeenagerRegular.png" // Replace with actual image path
+                  alt="English For Teenagers Regular"
                   width={400}
                   height={200}
                   className="rounded-t-lg"
                 />
-                <h3 className="text-xl font-bold mt-4">English For Teengers Regular</h3>
+                <h3 className="text-xl font-bold mt-4">English For Teenagers Regular</h3>
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
@@ -58,16 +57,16 @@ const ForTeengersSectionThree = () => {
                 </Link>
               </div>
 
-              {/* Offline Mode - English For Teengers Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              {/* Offline Mode - English For Teenagers Private */}
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Teengers-private.jpg" // Replace with actual image path
-                  alt="English For Teengers Private"
+                  src="/images/forteenagers/OfflineTeenagerPrivate.png" // Replace with actual image path
+                  alt="English For Teenagers Private"
                   width={400}
                   height={200}
                   className="rounded-t-lg"
                 />
-                <h3 className="text-xl font-bold mt-4">English For Teengers Private</h3>
+                <h3 className="text-xl font-bold mt-4">English For Teenagers Private</h3>
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
@@ -78,16 +77,16 @@ const ForTeengersSectionThree = () => {
             </>
           ) : (
             <>
-              {/* Online Mode - English For Teengers Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              {/* Online Mode - English For Teenagers Regular */}
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Teengers-online-regular.jpg" // Replace with actual image path
-                  alt="English For Teengers Online Regular"
+                  src="/images/forteenagers/OnlineTeenagerRegular.png" // Replace with actual image path
+                  alt="English For Teenagers Online Regular"
                   width={400}
                   height={200}
                   className="rounded-t-lg"
                 />
-                <h3 className="text-xl font-bold mt-4">English For Teengers Online Regular</h3>
+                <h3 className="text-xl font-bold mt-4">English For Teenagers Online Regular</h3>
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
@@ -96,16 +95,16 @@ const ForTeengersSectionThree = () => {
                 </Link>
               </div>
 
-              {/* Online Mode - English For Teengers Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              {/* Online Mode - English For Teenagers Private */}
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Teengers-online-private.jpg" // Replace with actual image path
-                  alt="English For Teengers Online Private"
+                  src="/images/forteenagers/OnlineTeenagerPrivate.png" // Replace with actual image path
+                  alt="English For Teenagers Online Private"
                   width={400}
                   height={200}
                   className="rounded-t-lg"
                 />
-                <h3 className="text-xl font-bold mt-4">English For Teengers Online Private</h3>
+                <h3 className="text-xl font-bold mt-4">English For Teenagers Online Private</h3>
                 <p className="text-sm mt-2">
                   Dapat Kode Kupon <span className="text-blue-500">Diskon Hingga 50%</span>
                 </p>
@@ -121,4 +120,4 @@ const ForTeengersSectionThree = () => {
   );
 };
 
-export default ForTeengersSectionThree;
+export default SectionThree;

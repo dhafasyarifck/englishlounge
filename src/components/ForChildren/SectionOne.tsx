@@ -53,12 +53,13 @@ const ForchildrenSectionOne = () => {
               Daftar Sekarang
             </a>
             <a
-              href="#"
+              href="https://wa.me/+6281294167130"
               className={`px-6 py-3 text-white rounded-lg transition-transform duration-200 ${isHovered2 ? 'bg-green-600' : 'bg-green-500'} ${isPressed2 ? 'scale-95' : 'scale-100'}`}
               onMouseEnter={() => setIsHovered2(true)}
               onMouseLeave={() => setIsHovered2(false)}
               onMouseDown={() => setIsPressed2(true)}
               onMouseUp={() => setIsPressed2(false)}
+              target="_blank"
             >
               Chat Min-GO
             </a>

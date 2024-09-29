@@ -31,7 +31,7 @@ const PrevArrow = (props) => {
   );
 };
 
-const ForchildrenSectionFour = () => {
+const SectionFour = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -47,14 +47,14 @@ const ForchildrenSectionFour = () => {
   };
 
   return (
-    <section id="forchildren-gallery" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="foradults-galleryn" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container mx-auto">
         <h2 className="text-center text-3xl font-bold mb-8">Galeri Foto</h2>
 
         <Slider {...settings} className="mx-4">
           <div className="px-2"> {/* Adjust margin or padding here to control space */}
             <Image
-              src="/images/forchildren/Banner2.png" // Replace with actual image path
+              src="/images/foradults/Banner2n.png" // Replace with actual image path
               alt="Gallery Image 1"
               width={300}
               height={200}
@@ -63,7 +63,7 @@ const ForchildrenSectionFour = () => {
           </div>
           <div className="px-2"> {/* Adjust margin or padding here to control space */}
             <Image
-              src="/images/forchildren/Banner2.png" // Replace with actual image path
+              src="/images/foradults/Banner2n.png" // Replace with actual image path
               alt="Gallery Image 2"
               width={300}
               height={200}
@@ -72,7 +72,7 @@ const ForchildrenSectionFour = () => {
           </div>
           <div className="px-2"> {/* Adjust margin or padding here to control space */}
             <Image
-              src="/images/forchildren/Banner2.png" // Replace with actual image path
+              src="/images/foradults/Banner2n.png" // Replace with actual image path
               alt="Gallery Image 3"
               width={300}
               height={200}
@@ -81,7 +81,7 @@ const ForchildrenSectionFour = () => {
           </div>
           <div className="px-2"> {/* Adjust margin or padding here to control space */}
             <Image
-              src="/images/forchildren/Banner2.png" // Replace with actual image path
+              src="/images/foradults/Banner2n.png" // Replace with actual image path
               alt="Gallery Image 4"
               width={300}
               height={200}
@@ -94,4 +94,4 @@ const ForchildrenSectionFour = () => {
   );
 };
 
-export default ForchildrenSectionFour;
+export default SectionFour;

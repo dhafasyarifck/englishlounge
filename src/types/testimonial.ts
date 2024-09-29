@@ -1,8 +1,9 @@
-export type Testimonial = {
+// types/testimonial.ts
+export interface Testimonial {
   id: number;
   name: string;
   designation: string;
   content: string;
   image: string;
   star: number;
-};
+}

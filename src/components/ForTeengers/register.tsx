@@ -273,12 +273,17 @@ const ForchildrenDaftar = () => {
               Daftar Sekarang
             </button>
 
-            <button
-              type="button"
-              className="w-full text-blue-500 py-2 rounded-lg border border-blue-500 mt-4 hover:bg-blue-100 transition"
+            <a
+              href="https://wa.me/+6281294167130"
+              target="_blank"
             >
-              Tanya Admin
-            </button>
+              <button
+                type="button"
+                className="w-full text-blue-500 py-2 rounded-lg border border-blue-500 mt-4 hover:bg-blue-100 transition"
+              >
+                Tanya Admin
+              </button>
+            </a>
           </form>
         </div>
       </div>

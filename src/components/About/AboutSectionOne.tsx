@@ -28,7 +28,9 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                paragraph="Our mission is to provide students of all levels with a supportive space to grow their language skills. Whether you're a beginner starting your language journey or an advanced learner refining your fluency, our expert instructors and carefully designed courses will help you achieve your goals.
+                
+"     
                 mb="44px"
               />
 
@@ -37,17 +39,9 @@ const AboutSectionOne = () => {
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
-                  </div>
+                  <p className="text-gray-500">We offer a wide range of courses, from General English and Business English to conversational practice and exam preparation (IELTS, TOEFL). Each class is tailored to meet the diverse needs of our learners, ensuring that you progress confidently and effectively.
+                  </p>
 
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
-                  </div>
                 </div>
               </div>
             </div>

@@ -31,7 +31,7 @@ const PrevArrow = (props) => {
   );
 };
 
-const ForchildrenSectionFour = () => {
+const SectionFour = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -94,4 +94,4 @@ const ForchildrenSectionFour = () => {
   );
 };
 
-export default ForchildrenSectionFour;
+export default SectionFour;

@@ -2,16 +2,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const ForAdultsSectionThree = () => {
+const SectionThree = () => {
   const [selectedMode, setSelectedMode] = useState("Offline"); // State to toggle between Offline and Online
 
   return (
-    <section id="forAdults" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="adults" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container mx-auto">
         {/* Title */}
         <h2 className="text-center text-3xl font-bold mb-8">
-          Daftar Program Kursus Bahasa Inggris Untuk Dewasa
+          Daftar Program Kursus Bahasa Inggris Untuk Remaja
         </h2>
 
         {/* Toggle Button */}
@@ -41,9 +40,9 @@ const ForAdultsSectionThree = () => {
           {selectedMode === "Offline" ? (
             <>
               {/* Offline Mode - English For Adults Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Adults-regular.jpg" // Replace with actual image path
+                  src="/images/foradults/adultregular.png" // Replace with actual image path
                   alt="English For Adults Regular"
                   width={400}
                   height={200}
@@ -59,9 +58,9 @@ const ForAdultsSectionThree = () => {
               </div>
 
               {/* Offline Mode - English For Adults Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Adults-private.jpg" // Replace with actual image path
+                  src="/images/foradults/adultprivate.png" // Replace with actual image path
                   alt="English For Adults Private"
                   width={400}
                   height={200}
@@ -79,9 +78,9 @@ const ForAdultsSectionThree = () => {
           ) : (
             <>
               {/* Online Mode - English For Adults Regular */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Adults-online-regular.jpg" // Replace with actual image path
+                  src="/images/foradults/adultregular2.png" // Replace with actual image path
                   alt="English For Adults Online Regular"
                   width={400}
                   height={200}
@@ -97,9 +96,9 @@ const ForAdultsSectionThree = () => {
               </div>
 
               {/* Online Mode - English For Adults Private */}
-              <div className="bg-white rounded-lg shadow-lg p-6 w-1/2">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-auto">
                 <Image
-                  src="/images/Adults-online-private.jpg" // Replace with actual image path
+                  src="/images/foradults/adultprivate2.png" // Replace with actual image path
                   alt="English For Adults Online Private"
                   width={400}
                   height={200}
@@ -121,4 +120,4 @@ const ForAdultsSectionThree = () => {
   );
 };
 
-export default ForAdultsSectionThree;
+export default SectionThree;

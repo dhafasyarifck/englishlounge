@@ -1,77 +1,34 @@
 "use client";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBook,
-  faGlobe,
-  faClipboardList,
-  faTag,
-  faStore,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
-const SectionTwoForAdults = () => {
+
+
+const SectionTwo = () => {
   return (
-    <section id="forAdults" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="foradults" className="pt-16 md:pt-20 lg:pt-28">
+
       <div className="container mx-auto px-4">
-        {/* Menu Section */}
-        <div className="flex justify-center space-x-10 mb-10">
-          {/* Menu Items */}
-          {[
-            { href: "/toefl", icon: faGlobe, label: "TOEFL" },
-            { href: "/ielts", icon: faBook, label: "IELTS" },
-            { href: "/toeic", icon: faClipboardList, label: "TOEIC" },
-            { href: "/promo", icon: faTag, label: "Pasti Promo" },
-            { href: "/cabang-kami", icon: faStore, label: "Cabang Kami" },
-            { href: "/tentang-kami", icon: faInfoCircle, label: "Tentang Kami" },
-          ].map(({ href, icon, label }) => (
-            <Link href={href} key={label} className="text-center">
-              <div className="cursor-pointer">
-                <div className="w-28 h-28 flex justify-center items-center transition-transform duration-300 hover:scale-110">
-                  <FontAwesomeIcon icon={icon} className="text-7xl" />
-                </div>
-                <p className="mt-2 transition-colors duration-300 hover:text-blue-500">
-                  {label}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        
 
         {/* Title Section */}
         <h2 className="text-center text-3xl font-bold mb-8">
-          Program Kursus Bahasa Inggris Untuk Dewasa
+        Program Kursus Bahasa Inggris Untuk Dewasa
         </h2>
 
         {/* Course Description */}
         <p className="mb-6">
-          Kursus Bahasa Inggris untuk dewasa adalah program yang ditujukan untuk
-          orang dewasa yang ingin meningkatkan keterampilan berbahasa Inggris
-          secara profesional. Program ini menekankan pada peningkatan kepercayaan
-          diri, penguasaan kosa kata, serta kemampuan berkomunikasi dalam
-          situasi sehari-hari maupun profesional.
-        </p>
-        <p className="mb-6">
-          Dengan metode pembelajaran yang interaktif dan menggunakan teknologi
-          modern, peserta dapat fokus belajar dalam suasana yang nyaman dan
-          mendukung. Program ini disesuaikan dengan kebutuhan orang dewasa yang
-          ingin menguasai bahasa Inggris dengan cepat dan efisien.
-        </p>
+        Kamu pasti ingin berbicara bahasa Inggris dengan lancar dan percaya diri kan? Pilihan yang tepat kalau kamu memilih Golden English!. </p>
 
-        {/* Teaching Techniques */}
-        <h3 className="text-xl font-semibold mb-4">Teknik Pengajaran</h3>
-        <ul className="list-disc list-inside mb-6">
-          <li>Diskusi dan Debat dalam Bahasa Inggris</li>
-          <li>Membaca Artikel Berita dan Jurnal</li>
-          <li>Presentasi dan Public Speaking</li>
-          <li>Pemahaman Video dan Podcast Berbahasa Inggris</li>
-          <li>Latihan Menulis Laporan dan Email</li>
-          <li>Simulasi Situasi dalam Dunia Kerja</li>
-          <li>Bermain Peran dan Diskusi Kelompok</li>
-        </ul>
+       <p className="mb-6"> Kami mempunyai 3 program kursus bahasa Inggris untuk dewasa yang dirancang khusus buat bantu kamu menguasai 4 skill utama berbahasa Inggris, yaitu: Speaking. Writing, Listening, dan Reading. Tak cuma sampai disitu, metode pembelajaran kami yang aplikatif dan komunikatif serta didukung dengan teknologi modern, tentu akan membantu kamu untuk jago berbahasa Inggris dengan cepat dan mudah. </p>
+
+        <p className="mb-6">Apa saja program yang kami sediakan? Basic Communication, Active Communication, dan Business English. </p>
+
+        <p className="mb-6">Ketiga program tersebut cocok buat kamu yang berusia dewasa dan punya target untuk jago bahasa Inggris dengan konsep belajar praktis.
+                </p>
+      
       </div>
     </section>
   );
 };
 
-export default SectionTwoForAdults;
+export default SectionTwo;
